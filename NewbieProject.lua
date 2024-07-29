@@ -4,7 +4,7 @@
 --- PREFIX: rh
 --- MOD_AUTHOR: [Celeritas]
 --- MOD_DESCRIPTION: New Added Jokers, Hand Types, etc.
---- VERSION: 1.1.1
+--- VERSION: 1.1.2
 ----------------------------------------------
 ------------MOD CODE -------------------------
 
@@ -359,6 +359,77 @@ SMODS.Joker {
      type = 'h_rh_Run of Three'
     },
     unlock_condition = {type = 'win_no_hand', extra = 'Run of Three'},
+    unlocked = false,
+    loc_vars = function(self, info_queue, card)
+        return {
+            vars = {card.ability.x_mult, localize(card.ability.type, 'poker_hands')}
+        }
+    end
+}
+
+
+SMODS.Atlas { key = 'thebolt', path = 'thebolt.png', px = 69, py = 93 }
+
+SMODS.Joker {
+    key = 'bolt',
+    name = "The Bolt",
+    loc_txt = {
+        name = "The Bolt",
+        text = {
+            "{X:mult,C:white}X3# {} Mult if played hand",
+            "contains a {C:attention}Run House{}."
+        },
+        unlock = {
+            "Win a run",
+            "without playing",
+            "a {C:attention}Run House{}."
+        }
+    },
+    rarity = 3,
+    atlas = 'thebolt',
+    pos = {x = 0, y = 0},
+    cost = 8,
+    blueprint_compat = true,
+    config = {
+     Xmult = 3,
+     type = 'h_rh_Run House'
+    },
+    unlock_condition = {type = 'win_no_hand', extra = 'Run House'},
+    unlocked = false,
+    loc_vars = function(self, info_queue, card)
+        return {
+            vars = {card.ability.x_mult, localize(card.ability.type, 'poker_hands')}
+        }
+    end
+}
+
+SMODS.Atlas { key = 'themarathon', path = 'themarathon.png', px = 69, py = 93 }
+
+SMODS.Joker {
+    key = 'marathon',
+    name = "The Marathon",
+    loc_txt = {
+        name = "The Marathon",
+        text = {
+            "{X:mult,C:white}X4# {} Mult if played hand",
+            "contains a {C:attention}Run of Four{}."
+        },
+        unlock = {
+            "Win a run",
+            "without playing",
+            "a {C:attention}Run of Four{}."
+        }
+    },
+    rarity = 3,
+    atlas = 'themarathon',
+    pos = {x = 0, y = 0},
+    cost = 8,
+    blueprint_compat = true,
+    config = {
+     Xmult = 4,
+     type = 'h_rh_Run of Four'
+    },
+    unlock_condition = {type = 'win_no_hand', extra = 'Run of Four'},
     unlocked = false,
     loc_vars = function(self, info_queue, card)
         return {
