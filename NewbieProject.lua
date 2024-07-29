@@ -1,10 +1,10 @@
 --- STEAMODDED HEADER
---- MOD_NAME: Run Hands
+--- MOD_NAME: Newbie Project
 --- MOD_ID: RH
 --- PREFIX: rh
 --- MOD_AUTHOR: [Celeritas]
---- MOD_DESCRIPTION: New Added Run Hands
---- VERSION: 1.0.0
+--- MOD_DESCRIPTION: New Added Jokers, Hand Types, etc.
+--- VERSION: 1.1.1
 ----------------------------------------------
 ------------MOD CODE -------------------------
 
